@@ -1,0 +1,103 @@
+\documentclass{beamer}
+
+\usepackage[utf8]{inputenc}
+\usepackage[spanish,es-noshorthands]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{amssymb,amsthm,amsmath,tikz,graphicx,caption,subcaption}
+
+\usetikzlibrary{intersections, arrows.meta, automata, er, calc, backgrounds, mindmap, folding, patterns, decorations.markings, fit,shadings, matrix, positioning, arrows, through}
+\usetheme{PaloAlto}
+\usecolortheme{seahorse}
+
+
+%Information to be included in the title page:
+\title{Algoritmos de compresión en medios de preservación y difusión cultural}
+\author{Juan de la Cruz García García}
+\institute{Actualización Científica - Master en Matemáticas - Universidad de Cádiz}
+\date{2021.03.14}
+
+\begin{document}
+
+\frame{\titlepage}
+
+\begin{frame}
+\frametitle{Table of Contents}
+\tableofcontents
+\end{frame}
+
+\section{Introducción}
+
+\begin{frame}
+\frametitle{¿De qué hablaremos hoy?}
+
+\begin{tikzpicture}
+	[
+	node distance=0.5cm and 1cm,
+        destacado/.style={
+            rectangle, 
+            rounded corners,
+            draw=red!50,
+            very thick,
+            fill=red!5,
+            align=center,
+            text width=2.5cm
+        }, 
+        explicacion/.style={
+	    rectangle, 
+	    rounded corners,
+            align=left,
+            draw=violet!50,
+            fill=violet!10,
+            very thick,
+            text width=6.25cm
+        }, 
+        flechaAccion/.style={
+            ->,
+            thick
+        }
+    ]
+    \node(algoritmos) [destacado] {Algoritmos de compresión};
+    \node(medios) [destacado, below=of algoritmos] {Medios};
+    \node(preservar) [destacado, below=0.75cm of medios] {Preservar};
+    \node(difundir) [destacado, below=1.25cm of preservar] {Difusión};
+    \node(cultura) [destacado, below=1cm of difundir] {Cultura};
+
+    \node(explicacionAlgoritmos) [explicacion, right=of algoritmos] {Matemáticas};
+    \node(explicacionMedios) [explicacion, right=of medios] {Formatos, objetos, vías};
+    \node(explicacionPreservar) [explicacion, right=of preservar] {Proteger, resguardar anticipadamente a alguien o algo, de algún daño o peligro};
+    \node(explicacionDifundir) [explicacion, right=of difundir] {Propagar o divulgar conocimientos, noticias, actitudes, costumbres, modas, etc};
+    \node(explicacionCultura) [explicacion, right=of cultura] {Música, Literatura, Cine, Pintura, Escultura...};
+
+    \draw[flechaAccion] (algoritmos)--(explicacionAlgoritmos);
+    \draw[flechaAccion] (medios)--(explicacionMedios);
+    \draw[flechaAccion] (preservar)--(explicacionPreservar);
+    \draw[flechaAccion] (difundir)--(explicacionDifundir);
+    \draw[flechaAccion] (cultura)--(explicacionCultura);
+\end{tikzpicture}
+
+%\begin{columns}
+
+%\column{0.5\textwidth}
+%This is a text in first column.
+%$$E=mc^2$$
+%\begin{itemize}
+%\item First item
+%\item Second item
+%\end{itemize}
+
+%\column{0.5\textwidth}
+%This text will be in the second column
+%and on a second tought this is a nice looking
+%layout in some cases.
+%\end{columns}
+\end{frame}
+
+\section{Formatos Analógicos y digitales}
+\section{Algoritmos sin compresión}
+\section{Algoritmos de compresión con pérdidas}
+\section{Algoritmos de compresión sin pérdidas}
+\section{Conveniencia para cada uso}
+
+
+
+\end{document}
