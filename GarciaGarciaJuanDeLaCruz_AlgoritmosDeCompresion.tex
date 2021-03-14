@@ -80,7 +80,7 @@
     \centering
 		\setbeamercovered{dynamic}
 		\begin{tikzpicture}[scale=0.75,transform shape]
-		\path[mindmap,concept color=green!20!black,text=white]
+		\path[mindmap,concept color=green!60!black,text=white]
 		node[concept] {Algoritmos de compresión}
 		[clockwise from=-45]
 		    child[concept color=teal!30!white] {
@@ -102,6 +102,77 @@
 		\end{tikzpicture}
 \end{frame}
 
+\begin{frame}
+    \frametitle{Algoritmos, Formatos y Estándares}
+    \centering
+		\setbeamercovered{dynamic}
+		\begin{tikzpicture}
+            [
+            node distance=0.5cm and 1cm,
+                circulo/.style={
+                    circle, 
+                    draw=red!50,
+                    very thick,
+                    fill=red!5,
+                    align=center,
+                    text width=2.5cm
+                }, 
+                explicacion/.style={
+                rectangle, 
+                rounded corners,
+                    align=left,
+                    draw=violet!50,
+                    fill=violet!10,
+                    very thick,
+                    text width=6.25cm
+                }, 
+                flechaAccion/.style={
+                    ->,
+                    thick
+                }
+            ]
+            
+            \draw[black,thick,fill=teal!10] (0,0) circle (3.5cm);
+            \node[] at (0,3){Estandar};
+            \draw[black,thick,fill=purple!10] (0,0) circle (2.5cm);
+            \node[] at (0,2){Formato};
+            \draw[black,thick,fill=green!10] (0,0) circle (1.5cm);
+            \node[] at (0,0){Algoritmo};
+            %\node(algoritmos) [circle, draw=teal!70,very thick,fill=purple!5,align=center,text width=4.5cm, label=south:Formato] {Formato};
+            %\node(algoritmos) [circle, draw=teal!50,very thick,fill=purple!5,align=center,text width=2.5cm] {Algoritmo};
+            
+		
+		\end{tikzpicture}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Nomenclatura casual}
+    \centering
+		\setbeamercovered{dynamic}
+		\begin{tikzpicture}[scale=0.75,transform shape]
+		\path[mindmap,concept color=green!60!black,text=white]
+		node[concept] {Formatos de compresión}
+		[clockwise from=-45]
+		    child[concept color=teal!30!white] {
+			node[concept] {Con pérdida}
+			[clockwise from=90]
+			child { node[concept] {JPG} }
+			child { node[concept] {WebP} }
+            child { node[concept] {MP3} }
+            child { node[concept] {H.264} }
+			}  
+			child[concept color=purple!20!white]{
+			node[concept] {Sin pérdida}
+			[clockwise from=-10]
+			child {node[concept]{PNG}}
+			child {node[concept]{BMP}}
+			child {node[concept]{AVI}}
+			child {node[concept]{ALAC}}
+            child {node[concept]{WAV}}
+		};
+		
+		\end{tikzpicture}
+\end{frame}
 %\begin{columns}
 
 %\column{0.5\textwidth}
