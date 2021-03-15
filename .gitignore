@@ -265,3 +265,5 @@ TSWLatexianTemp*
 *.sta
 
 *.pdf
+
+.DS_Store
